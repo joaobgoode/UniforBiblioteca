@@ -20,6 +20,8 @@ class Placeholder : AppCompatActivity() {
             insets
         }
 
+        textoOrigem = findViewById(R.id.origemText)
+
         val origem = intent.getStringExtra("origem") ?: "placeholder"
 
         textoOrigem.text = origem
