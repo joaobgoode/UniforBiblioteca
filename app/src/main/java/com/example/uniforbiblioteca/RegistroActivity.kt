@@ -54,8 +54,7 @@ class RegistroActivity : AppCompatActivity() {
         }
 
         registrarBtn.setOnClickListener {
-            val intencao = Intent(this, Placeholder::class.java)
-            intencao.putExtra("origem", "registrar")
+            val intencao = Intent(this, LoginActivity::class.java)
             startActivity(intencao)
         }
 

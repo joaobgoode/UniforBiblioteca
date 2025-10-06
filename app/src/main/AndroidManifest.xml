@@ -12,11 +12,17 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.UniforBiblioteca">
         <activity
+            android:name=".ModificarActivity"
+            android:exported="false" />
+        <activity
+            android:name=".RecuperarActivity"
+            android:exported="false" />
+        <activity
             android:name=".RegistroActivity"
             android:exported="false" />
         <activity
             android:name=".LoginActivity"
-            android:exported="true" >
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -28,8 +34,7 @@
             android:exported="false" />
         <activity
             android:name=".MainActivity"
-            android:exported="false">
-        </activity>
+            android:exported="false" />
     </application>
 
 </manifest>
