@@ -34,8 +34,7 @@ class LoginActivity : AppCompatActivity() {
         super.onStart()
 
         entrar.setOnClickListener {
-            val intencao = Intent(this, Placeholder::class.java)
-            intencao.putExtra("origem", "entrar")
+            val intencao = Intent(this, MainActivity::class.java)
             startActivity(intencao)
         }
 
