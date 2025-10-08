@@ -22,32 +22,75 @@
         android:orientation="horizontal">
 
         <Button
-            android:id="@+id/homeBtn"
-            android:layout_width="wrap_content"
+            android:id="@+id/homeButton"
+            android:layout_width="50dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Home" />
+            android:backgroundTint="#00FFFFFF"
+            android:tag="com.google.android.material.button.MaterialButton"
+            android:textColorLink="#979696"
+            app:cornerRadius="28dp"
+            app:icon="@drawable/home_svgrepo_com"
+            app:iconSize="32dp"
+            app:iconTint="#000000"
+            app:rippleColor="#4E4E4E" />
+
+        <Space
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
 
         <Button
             android:id="@+id/historicoBtn"
-            android:layout_width="wrap_content"
+            android:layout_width="50dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Historico" />
+            android:backgroundTint="#00FFFFFF"
+            android:tag="com.google.android.material.button.MaterialButton"
+            android:textColorLink="#979696"
+            app:cornerRadius="28dp"
+            app:icon="@drawable/books_overlapping_arrangement_svgrepo_com"
+            app:iconSize="28dp"
+            app:iconTint="#000000"
+            app:rippleColor="#4E4E4E" />
+
+        <Space
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
 
         <Button
             android:id="@+id/pastasBtn"
-            android:layout_width="wrap_content"
+            android:layout_width="50dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Pastas" />
+            android:backgroundTint="#00FFFFFF"
+            android:tag="com.google.android.material.button.MaterialButton"
+            android:textColorLink="#979696"
+            app:cornerRadius="28dp"
+            app:icon="@drawable/folder_alt_svgrepo_com"
+            app:iconSize="30dp"
+            app:iconTint="#000000"
+            app:rippleColor="#4E4E4E" />
+
+        <Space
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
 
         <Button
             android:id="@+id/menuBtn"
-            android:layout_width="wrap_content"
+            android:layout_width="50dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Menu" />
+            android:backgroundTint="#00FFFFFF"
+            android:tag="com.google.android.material.button.MaterialButton"
+            android:textColorLink="#979696"
+            app:cornerRadius="28dp"
+            app:icon="@android:drawable/ic_dialog_dialer"
+            app:iconSize="28dp"
+            app:iconTint="#000000"
+            app:rippleColor="#4E4E4E" />
     </LinearLayout>
 
 </LinearLayout>
