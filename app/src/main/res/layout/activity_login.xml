@@ -10,6 +10,7 @@
     <LinearLayout
         android:layout_width="410dp"
         android:layout_height="736dp"
+        android:background="@color/background"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -65,8 +66,10 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginTop="20dp"
+            android:backgroundTint="@color/button"
             android:gravity="center_vertical"
-            android:text="Entrar" />
+            android:text="Entrar"
+            android:textColorLink="@color/button" />
 
         <TextView
             android:id="@+id/esqueciSenha"
