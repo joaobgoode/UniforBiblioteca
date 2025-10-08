@@ -1,10 +1,14 @@
 package com.example.uniforbiblioteca
 
+import LivroCardData
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -34,7 +38,26 @@ class HomeFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_home, container, false)
+        val view = inflater.inflate(R.layout.fragment_home, container, false)
+
+        val recyclerView: RecyclerView = view.findViewById(R.id.recyclerViewHome)
+        recyclerView.layoutManager = LinearLayoutManager(requireContext())
+
+        val livros = listOf(
+            LivroCardData(1, "Livro 1", "Autor 1", "Finaliza: 13 de outubro de 2025", "https://placehold.co/200x300/png"),
+            LivroCardData(2, "Livro 2", "Autor 2", "Finaliza: 13 de outubro de 2025", "https://placehold.co/200x300/png"),
+            LivroCardData(3, "Livro 3", "Autor 3", "Finaliza: 22 de outubro de 2025", "https://placehold.co/200x300/png"),
+            LivroCardData(4, "Livro 4", "Autor 4", "Finaliza: 22 de outubro de 2025", "https://placehold.co/200x300/png"),
+        )
+
+        //
+        val adapter = EmprestadoAdapter(livros) { livro ->
+            Toast.makeText(requireContext(), "Clicou em: ${livro.titulo}", Toast.LENGTH_SHORT).show()
+        }
+
+        recyclerView.adapter = adapter
+
+        return view
     }
 
     companion object {
