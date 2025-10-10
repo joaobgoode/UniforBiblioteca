@@ -5,4 +5,5 @@
     <color name="grey">#8b8b8b</color>
     <color name="background">#99d6ff</color>
     <color name="button">#0368ab</color>
+    <color name="modalbackground">#FFFFFFFF</color>
 </resources>
