@@ -17,7 +17,7 @@
         android:layout_weight="1" />
 
     <LinearLayout
-        android:id="@+id/linearLayout"
+        android:id="@+id/bottomMenu"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:orientation="horizontal">

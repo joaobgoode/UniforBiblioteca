@@ -79,4 +79,9 @@ class PastasFragment : Fragment() {
                 }
             }
     }
+
+    override fun onResume() {
+        super.onResume()
+        (activity as? MainActivity)?.changeState("pastas")
+    }
 }
