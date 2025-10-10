@@ -89,5 +89,13 @@ class MenuFragment : Fragment() {
                 .addToBackStack("menu")
                 .commit()
         }
+
+        acervoBtn.setOnClickListener {
+            (activity as? MainActivity)?.changeState("acervo")
+            parentFragmentManager.beginTransaction()
+                .replace(R.id.mainFragmentContainer, AcervoFragment::class.java, null)
+                .addToBackStack("menu")
+                .commit()
+        }
     }
 }
