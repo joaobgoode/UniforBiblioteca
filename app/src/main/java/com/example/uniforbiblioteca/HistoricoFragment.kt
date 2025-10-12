@@ -60,7 +60,10 @@ class HistoricoFragment : Fragment() {
 
         // Adapter
         val adapter = HistoricoAdapter(livros) { livro ->
-            Toast.makeText(requireContext(), "Clicou em: ${livro.titulo}", Toast.LENGTH_SHORT).show()
+            parentFragmentManager.beginTransaction()
+                .replace(R.id.mainFragmentContainer, LivroFragment::class.java, null)
+                .addToBackStack(null)
+                .commit()
         }
 
         recyclerView.adapter = adapter

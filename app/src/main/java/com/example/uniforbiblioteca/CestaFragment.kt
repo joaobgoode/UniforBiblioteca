@@ -19,16 +19,14 @@ private const val ARG_PARAM2 = "param2"
 
 /**
  * A simple [Fragment] subclass.
- * Use the [AcervoFragment.newInstance] factory method to
+ * Use the [CestaFragment.newInstance] factory method to
  * create an instance of this fragment.
  */
-class AcervoFragment : Fragment() {
+class CestaFragment : Fragment() {
     // TODO: Rename and change types of parameters
     private var param1: String? = null
     private var param2: String? = null
 
-    lateinit var cestaFAB: FloatingActionButton
-    lateinit var filtroBtn: Button
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -46,12 +44,12 @@ class AcervoFragment : Fragment() {
          *
          * @param param1 Parameter 1.
          * @param param2 Parameter 2.
-         * @return A new instance of fragment AcervoFragment.
+         * @return A new instance of fragment CestaFragment.
          */
         // TODO: Rename and change types and number of parameters
         @JvmStatic
         fun newInstance(param1: String, param2: String) =
-            AcervoFragment().apply {
+            CestaFragment().apply {
                 arguments = Bundle().apply {
                     putString(ARG_PARAM1, param1)
                     putString(ARG_PARAM2, param2)
@@ -60,12 +58,10 @@ class AcervoFragment : Fragment() {
     }
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
-        val view = inflater.inflate(R.layout.fragment_acervo, container, false)
+        val view = inflater.inflate(R.layout.fragment_cesta, container, false)
 
-        val recyclerView: RecyclerView = view.findViewById(R.id.acervoRecyclerView)
+        val recyclerView: RecyclerView = view.findViewById(R.id.cestaRecyclerView)
         recyclerView.layoutManager = LinearLayoutManager(requireContext())
-
-        cestaFAB = view.findViewById(R.id.cestaFAB)
 
         // Lista de placeholders
         val livros = listOf(
@@ -74,41 +70,24 @@ class AcervoFragment : Fragment() {
             LivroCardData(3, "Livro 3", "Autor 3", "8 dias atrás", "https://placehold.co/200x300/png"),
             LivroCardData(4, "Livro 4", "Autor 4", "30 dias atrás", "https://placehold.co/200x300/png"),
             LivroCardData(5, "Livro 5", "Autor 5", "50 dias atrás", "https://placehold.co/200x300/png"),
-            LivroCardData(6, "Livro 6", "Autor 6", "50 dias atrás", "https://placehold.co/200x300/png"),
-            LivroCardData(7, "Livro 7", "Autor 7", "70 dias atrás", "https://placehold.co/200x300/png"),
-            LivroCardData(8, "Livro 8", "Autor 8", "90 dias atrás", "https://placehold.co/200x300/png"),
-            LivroCardData(9, "Livro 9", "Autor 9", "90 dias atrás", "https://placehold.co/200x300/png")
         )
 
         // Adapter
         val adapter = AcervoAdapter(livros) { livro ->
             parentFragmentManager.beginTransaction()
-            .replace(R.id.mainFragmentContainer, LivroFragment::class.java, null)
-            .addToBackStack(null)
-            .commit()
-        }
-
-        recyclerView.adapter = adapter
-
-        cestaFAB.setOnClickListener {
-            parentFragmentManager.beginTransaction()
-                .replace(R.id.mainFragmentContainer, CestaFragment::class.java, null)
+                .replace(R.id.mainFragmentContainer, LivroFragment::class.java, null)
                 .addToBackStack(null)
                 .commit()
         }
 
-        filtroBtn = view.findViewById(R.id.acervoFilterBtn)
+        recyclerView.adapter = adapter
 
-        filtroBtn.setOnClickListener {
-            val dialog = AcervoFiltroDialogFragment()
-            dialog.show(parentFragmentManager, "AcervoFiltroDialog")
-        }
 
         return view
     }
 
     override fun onResume() {
         super.onResume()
-        (activity as? MainActivity)?.changeState("acervo")
+        (activity as? MainActivity)?.changeState("cesta")
     }
 }
