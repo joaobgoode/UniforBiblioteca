@@ -250,9 +250,12 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="right"
-                android:layout_weight="1"
+                android:backgroundTint="#00FFFFFF"
                 android:paddingTop="10dp"
-                android:text="***" />
+                android:text="Procurar"
+                android:textColor="@color/botao_borda"
+                app:icon="@drawable/star"
+                app:iconTint="@color/botao_borda" />
         </LinearLayout>
 
         <EditText

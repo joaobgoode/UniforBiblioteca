@@ -86,7 +86,7 @@ class MainActivity : AppCompatActivity() {
             historicoBtn.iconTint = ContextCompat.getColorStateList(this, R.color.grey)
             pastasBtn.iconTint = ContextCompat.getColorStateList(this, R.color.black)
             showBottomNav()
-        } else if (state == "pastas") {
+        } else if (state == "pastas" || state == "pasta" ) {
             homeBtn.iconTint = ContextCompat.getColorStateList(this, R.color.black)
             historicoBtn.iconTint = ContextCompat.getColorStateList(this, R.color.black)
             pastasBtn.iconTint = ContextCompat.getColorStateList(this, R.color.grey)
