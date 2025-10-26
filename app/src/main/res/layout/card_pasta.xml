@@ -8,48 +8,47 @@
     android:layout_height="wrap_content">
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="match_parent"
+        android:id="@+id/frame_card"
 
-        android:background="@color/modalbackground"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:background="@color/background"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
-
-
 
 
         <ImageView
             android:id="@+id/imagem_card_pasta"
             android:layout_width="60dp"
             android:layout_height="60dp"
-            app:srcCompat="@drawable/pasta_cinza"
-            tools:layout_editor_absoluteX="32dp"
             android:layout_marginStart="10dp"
-
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
+
             app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/pasta_cinza"
+            tools:layout_editor_absoluteX="32dp"
             tools:layout_editor_absoluteY="16dp" />
 
         <TextView
             android:id="@+id/titulo_card_pasta"
+            style="@style/TitleText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="10dp"
             android:layout_marginTop="5dp"
             android:text="Titulo"
-            style="@style/TitleText"
             app:layout_constraintStart_toEndOf="@+id/imagem_card_pasta"
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
             android:id="@+id/card_ultima_modificacao"
+            style="@style/LightText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="10dp"
-            android:layout_marginTop="5dp"
 
-            style="@style/LightText"
+            android:layout_marginTop="5dp"
             android:text="Ultima Modificalção: DD/MM/AAAA"
             app:layout_constraintStart_toEndOf="@+id/imagem_card_pasta"
             app:layout_constraintTop_toBottomOf="@+id/titulo_card_pasta" />

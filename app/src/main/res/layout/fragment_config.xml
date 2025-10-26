@@ -106,6 +106,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:backgroundTint="#00FFFFFF"
                 android:src="@drawable/minus" />
 
 
@@ -125,7 +126,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:src="@drawable/minus" />
+                android:backgroundTint="#00FFFFFF"
+                android:src="@drawable/plus" />
         </LinearLayout>
 
         <Space
