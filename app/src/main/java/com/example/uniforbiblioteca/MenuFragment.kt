@@ -76,6 +76,13 @@ class MenuFragment : Fragment() {
         configBtn = view.findViewById(R.id.menuConfigButton)
         acervoBtn = view.findViewById(R.id.menuAcervoButton)
 
+        chatBtn.setOnClickListener {
+            parentFragmentManager.beginTransaction()
+                .replace(R.id.mainFragmentContainer, ChatFragment::class.java, null)
+                .addToBackStack("menu")
+                .commit()
+        }
+
         contatoBtn.setOnClickListener {
             parentFragmentManager.beginTransaction()
                 .replace(R.id.mainFragmentContainer, ContatoFragment::class.java, null)
@@ -98,4 +105,6 @@ class MenuFragment : Fragment() {
                 .commit()
         }
     }
+
+
 }

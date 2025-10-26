@@ -23,9 +23,6 @@ class PastaAdapter(
             titleView.text = pasta.titulo
             tempoView.text = pasta.lastModified;
 
-            Glide.with(itemView.context)
-                .load(pasta.image)
-                .into(coverView)
 
             itemView.setOnClickListener { onItemClick(pasta) }
         }

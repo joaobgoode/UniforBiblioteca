@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/textView59"
+        style="@style/TitleText"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:foregroundGravity="center"
+        android:gravity="center"
+        android:text="Quantos exemplares deseja adicionar?" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:foregroundGravity="center"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:id="@+id/menos_exemplar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:backgroundTint="#00FFFFFF"
+            android:foregroundGravity="center"
+            app:srcCompat="@drawable/minus" />
+
+        <EditText
+            android:id="@+id/quantidade_adicionar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:ems="2"
+            android:foregroundGravity="center"
+            android:inputType="number" />
+
+        <ImageButton
+            android:id="@+id/mais_exemplar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:backgroundTint="#00FFFFFF"
+            android:foregroundGravity="center"
+            app:srcCompat="@drawable/plus" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/confirmar_add_exemplares"
+        style="@style/botao"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:foregroundGravity="center"
+        android:text="confirmar" />
+
+    <Button
+        android:id="@+id/cancelar_add_exemplares"
+        style="@style/botao_neg"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:foregroundGravity="center"
+        android:text="cancelar" />
+</LinearLayout>

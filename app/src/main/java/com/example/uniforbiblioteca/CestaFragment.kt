@@ -10,52 +10,16 @@ import android.widget.Button
 import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.example.uniforbiblioteca.ui.DialogWarningConfirmar
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 
-// TODO: Rename parameter arguments, choose names that match
-// the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-private const val ARG_PARAM1 = "param1"
-private const val ARG_PARAM2 = "param2"
-
-/**
- * A simple [Fragment] subclass.
- * Use the [CestaFragment.newInstance] factory method to
- * create an instance of this fragment.
- */
 class CestaFragment : Fragment() {
-    // TODO: Rename and change types of parameters
-    private var param1: String? = null
-    private var param2: String? = null
+    lateinit var voltar: Button
 
+    lateinit var addFAB: FloatingActionButton
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        arguments?.let {
-            param1 = it.getString(ARG_PARAM1)
-            param2 = it.getString(ARG_PARAM2)
-        }
-    }
+    lateinit var confirmarBtn: Button
 
-
-    companion object {
-        /**
-         * Use this factory method to create a new instance of
-         * this fragment using the provided parameters.
-         *
-         * @param param1 Parameter 1.
-         * @param param2 Parameter 2.
-         * @return A new instance of fragment CestaFragment.
-         */
-        // TODO: Rename and change types and number of parameters
-        @JvmStatic
-        fun newInstance(param1: String, param2: String) =
-            CestaFragment().apply {
-                arguments = Bundle().apply {
-                    putString(ARG_PARAM1, param1)
-                    putString(ARG_PARAM2, param2)
-                }
-            }
-    }
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         val view = inflater.inflate(R.layout.fragment_cesta, container, false)
@@ -73,7 +37,7 @@ class CestaFragment : Fragment() {
         )
 
         // Adapter
-        val adapter = AcervoAdapter(livros) { livro ->
+        val adapter = CestaAdapter(livros) { livro ->
             parentFragmentManager.beginTransaction()
                 .replace(R.id.mainFragmentContainer, LivroFragment::class.java, null)
                 .addToBackStack(null)
@@ -81,6 +45,30 @@ class CestaFragment : Fragment() {
         }
 
         recyclerView.adapter = adapter
+
+        voltar = view.findViewById(R.id.voltar_cesta)
+
+        voltar.setOnClickListener {
+            requireActivity().onBackPressedDispatcher.onBackPressed()
+        }
+
+
+        addFAB = view.findViewById(R.id.cesta_add_fab)
+
+        addFAB.setOnClickListener {
+            parentFragmentManager.beginTransaction()
+                .replace(R.id.mainFragmentContainer, AcervoFragment::class.java, null)
+                .addToBackStack(null)
+                .commit()
+        }
+
+        confirmarBtn = view.findViewById(R.id.continuar_cesta)
+
+        confirmarBtn.setOnClickListener {
+            val dialog = DialogWarningConfirmar()
+            dialog.show(parentFragmentManager, "Warn")
+        }
+
 
 
         return view

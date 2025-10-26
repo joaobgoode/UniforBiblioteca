@@ -1,9 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+
+    <color name="primary_text_color">#FF000000</color>
+
+
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="grey">#8b8b8b</color>
-    <color name="background">#99d6ff</color>
+    <color name="background">#f3f3f3</color>
     <color name="button">#0368ab</color>
-    <color name="modalbackground">#FFFFFFFF</color>
+    <color name="modalbackground">#FFFFFF</color>
+    <color name="light_blue_600">#039BE5</color>
+    <color name="light_blue_A200">#40C4FF</color>
+    <color name="light_blue_900">#01579B</color>
+    <color name="light_blue_A400">#00B0FF</color>
+
+    <color name="botao_fundo">#0368ab</color>
+    <color name="botao_borda">#01579B</color>
+    <color name="botao_fundo_neg">#b01c12</color>
+    <color name="botao_borda_neg">#821a12</color>
+
+
+    <color name="amarelo">#fcba03</color>
 </resources>

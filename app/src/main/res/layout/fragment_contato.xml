@@ -8,10 +8,8 @@
     tools:context=".ContatoFragment">
 
     <Button
-        android:id="@+id/button2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="voltar"
+        android:id="@+id/voltar_contato"
+        style="@style/voltar"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -31,7 +29,7 @@
             android:layout_gravity="center"
             android:gravity="center"
             android:text="Contato"
-            android:textSize="20sp" />
+            style="@style/ScreenTitleText"/>
 
         <Space
             android:layout_width="match_parent"
@@ -45,7 +43,7 @@
             android:layout_gravity="center"
             android:gravity="center"
             android:text="Telefone"
-            android:textSize="16sp" />
+            style="@style/TitleText"/>
 
         <TextView
             android:id="@+id/textView24"
@@ -54,7 +52,9 @@
             android:layout_gravity="center"
             android:gravity="center"
             android:text="(85) 3477-3257"
-            android:textSize="16sp" />
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="5dp"
+            style="@style/ScreenTitleText" />
 
         <Space
             android:layout_width="match_parent"
@@ -68,7 +68,7 @@
             android:layout_gravity="center"
             android:gravity="center"
             android:text="Whatsapp"
-            android:textSize="16sp" />
+            style="@style/TitleText" />
 
         <TextView
             android:id="@+id/textView26"
@@ -77,7 +77,8 @@
             android:layout_gravity="center"
             android:gravity="center"
             android:text="(85) 3477-3257"
-            android:textSize="16sp" />
+            android:textSize="16sp"
+            style="@style/NormalText" />
 
         <Space
             android:layout_width="match_parent"
@@ -91,7 +92,7 @@
             android:layout_gravity="center"
             android:gravity="center"
             android:text="Email"
-            android:textSize="16sp" />
+            style="@style/TitleText"/>
 
         <TextView
             android:id="@+id/textView28"
@@ -100,7 +101,7 @@
             android:layout_gravity="center"
             android:gravity="center"
             android:text="bib@unifor.br"
-            android:textSize="16sp" />
+            style="@style/NormalText" />
 
         <Space
             android:layout_width="match_parent"

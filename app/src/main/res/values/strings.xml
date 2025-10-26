@@ -2,4 +2,10 @@
     <string name="app_name">UniforBiblioteca</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="filter">Filter</string>
+    <string name="acervo">Acervo</string>
+    <string name="usu_rios">Usuários</string>
+    <string name="emprestimos">Emprestimos</string>
+    <string name="reservas">Reservas</string>
+    <string name="listas">Listas</string>
 </resources>

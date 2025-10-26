@@ -7,6 +7,7 @@ import android.view.*
 import android.widget.Button
 import android.widget.EditText
 import androidx.fragment.app.DialogFragment
+import androidx.core.graphics.drawable.toDrawable
 
 class AcervoFiltroDialogFragment : DialogFragment() {
 
@@ -32,7 +33,7 @@ class AcervoFiltroDialogFragment : DialogFragment() {
             ViewGroup.LayoutParams.MATCH_PARENT,
             ViewGroup.LayoutParams.WRAP_CONTENT
         )
-        dialog?.window?.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))
+        dialog?.window?.setBackgroundDrawable(Color.TRANSPARENT.toDrawable())
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {

@@ -16,10 +16,7 @@
             android:id="@+id/textView16"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginTop="20dp"
-            android:layout_weight="0"
-            android:gravity="center"
+            style="@style/ScreenTitleText"
             android:text="Menu"
             android:textSize="20sp" />
 
@@ -60,7 +57,7 @@
             android:layout_gravity="center"
             android:layout_weight="1"
             android:gravity="center"
-            android:text="Configuraçõs"
+            android:text="Configurações"
             android:textSize="20sp" />
 
         <Space
@@ -72,9 +69,7 @@
 
     <Button
         android:id="@+id/button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Voltar"
+        style="@style/voltar"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 

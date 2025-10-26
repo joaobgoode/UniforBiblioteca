@@ -1,5 +1,6 @@
 package com.example.uniforbiblioteca
 
+import android.content.Intent
 import android.content.res.ColorStateList
 import android.os.Bundle
 import android.view.View
@@ -106,5 +107,11 @@ class MainActivity : AppCompatActivity() {
 
     private fun hideBottomNav() {
         bottomMenu.visibility = View.GONE
+    }
+
+
+    fun sair(){
+        val intencao = Intent(this, LoginActivity::class.java)
+        startActivity(intencao)
     }
 }

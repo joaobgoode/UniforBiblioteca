@@ -3,6 +3,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
+
+    android:background="@color/modalbackground"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".LoginActivity">
@@ -13,8 +15,8 @@
         android:background="@color/background"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:layout_editor_absoluteX="0dp">
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
         <ImageView
             android:id="@+id/logo"
@@ -33,7 +35,7 @@
             android:text="Matricula" />
 
         <EditText
-            android:id="@+id/editTextNumber"
+            android:id="@+id/login_matricula"
             android:layout_width="280dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
@@ -66,10 +68,9 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginTop="20dp"
-            android:backgroundTint="@color/button"
-            android:gravity="center_vertical"
-            android:text="Entrar"
-            android:textColorLink="@color/button" />
+            style="@style/botao"
+            android:gravity="center"
+            android:text="Entrar"/>
 
         <TextView
             android:id="@+id/esqueciSenha"

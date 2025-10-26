@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <TextView
+        style="@style/TitleText"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="10dp"
+        android:gravity="center"
+        android:text="Em que condição o livro se encontra?" />
+
+    <TextView
+        android:id="@+id/muito_boa_condicao"
+        style="@style/NormalText"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="10dp"
+        android:gravity="center"
+        android:text="✓ Muito Boa"
+        android:textColor="@color/light_blue_A400" />
+
+    <TextView
+        android:id="@+id/boa_condicao"
+        style="@style/NormalText"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="10dp"
+        android:gravity="center"
+        android:text="Boa" />
+
+    <TextView
+        android:id="@+id/conservado_condicao"
+        style="@style/NormalText"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="10dp"
+        android:gravity="center"
+        android:text="Conservado" />
+
+    <TextView
+        android:id="@+id/ruim_condicao"
+        style="@style/NormalText"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="10dp"
+        android:gravity="center"
+        android:text="Ruim" />
+
+    <TextView
+        android:id="@+id/muito_ruim_condicao"
+        style="@style/NormalText"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="10dp"
+        android:gravity="center"
+        android:text="Muito Ruim" />
+
+
+    <Button
+        android:id="@+id/confirmar_pedido"
+        style="@style/botao"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:foregroundGravity="center"
+        android:text="confirmar" />
+
+    <Button
+        android:id="@+id/cancelar_pedido"
+        style="@style/botao_neg"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:foregroundGravity="center"
+        android:text="cancelar" />
+</LinearLayout>

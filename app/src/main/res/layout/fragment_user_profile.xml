@@ -1,0 +1,120 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    tools:context=".UserProfileFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/user_profile_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="60dp"
+            android:text="João Victor Vieira Marcondes"
+            style="@style/TitleText"/>
+
+        <TextView
+            android:id="@+id/user_profile_matricula"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            style="@style/NormalText"
+            android:text="2412819" />
+
+        <TextView
+            android:id="@+id/user_profile_email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            style="@style/NormalText"
+            android:text="joaovictorvvm@edu.unifor.br" />
+
+        <Button
+            android:id="@+id/user_profile_cesta_button"
+            style="@style/botao"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="20dp"
+            android:text="Criar Cesta" />
+
+        <View
+            android:id="@+id/divider3"
+            android:layout_width="match_parent"
+            android:layout_height="3dp"
+            android:background="?android:attr/listDivider"
+            android:backgroundTint="@color/black" />
+
+        <TextView
+            android:id="@+id/lbl_user_profile_emprestimos"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:text="@string/emprestimos"
+            style="@style/TitleText"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/user_profile_emprestimos_rv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <View
+            android:id="@+id/divider4"
+            android:layout_width="match_parent"
+            android:layout_height="3dp"
+            android:background="?android:attr/listDivider"
+            android:backgroundTint="@color/black" />
+
+        <TextView
+            android:id="@+id/lbl_user_profile_reservas"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:text="@string/reservas"
+            style="@style/TitleText"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/user_profile_reservas_rv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <View
+            android:id="@+id/divider5"
+            android:layout_width="match_parent"
+            android:layout_height="3dp"
+            android:background="?android:attr/listDivider"
+            android:backgroundTint="@color/black" />
+
+        <TextView
+            android:id="@+id/lbl_user_profile_listas"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:text="@string/listas"
+            style="@style/TitleText" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/_user_profile_listas_rv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <Button
+            android:id="@+id/user_profile_delete_button"
+            style="@style/botao_neg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="5dp"
+            android:text="Delete" />
+
+    </LinearLayout>
+</ScrollView>

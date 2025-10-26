@@ -5,13 +5,12 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/background"
+
     tools:context=".ConfigFragment">
 
     <Button
-        android:id="@+id/button3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="voltar"
+        android:id="@+id/config_voltar"
+        style="@style/voltar"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -28,10 +27,11 @@
             android:id="@+id/textView18"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:gravity="center"
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="5dp"
+            style="@style/ScreenTitleText"
             android:text="Configurações"
-            android:textSize="20sp" />
+            />
 
         <Space
             android:layout_width="match_parent"
@@ -45,7 +45,7 @@
             android:layout_gravity="center"
             android:gravity="center"
             android:text="Daltônico"
-            android:textSize="18sp" />
+            style="@style/TitleText"/>
 
         <Switch
             android:id="@+id/daltonicoSwitch"
@@ -53,7 +53,8 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginTop="10dp"
-            android:gravity="center" />
+            android:gravity="center"
+            tools:ignore="UseSwitchCompatOrMaterialXml" />
 
         <Space
             android:layout_width="match_parent"
@@ -67,7 +68,7 @@
             android:layout_gravity="center"
             android:gravity="center"
             android:text="Fonte para dislexia"
-            android:textSize="18sp" />
+            style="@style/TitleText"/>
 
         <Switch
             android:id="@+id/dislexiaSwitch"
@@ -75,7 +76,8 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginTop="10dp"
-            android:gravity="center" />
+            android:gravity="center"
+            tools:ignore="UseSwitchCompatOrMaterialXml" />
 
         <Space
             android:layout_width="match_parent"
@@ -89,7 +91,7 @@
             android:layout_gravity="center"
             android:gravity="center"
             android:text="Tamanho da fonte"
-            android:textSize="18sp" />
+            style="@style/TitleText"/>
 
         <LinearLayout
             android:layout_width="wrap_content"
@@ -99,14 +101,13 @@
             android:gravity="center"
             android:orientation="horizontal">
 
-            <Button
+            <ImageButton
                 android:id="@+id/menorBtn"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center"
                 android:layout_weight="1"
-                android:gravity="center"
-                android:text="-" />
+                android:src="@drawable/minus" />
+
 
             <TextView
                 android:id="@+id/tamanhoFonte"
@@ -119,14 +120,12 @@
                 android:gravity="center"
                 android:text="100%" />
 
-            <Button
+            <ImageButton
                 android:id="@+id/maiorBtn"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center"
                 android:layout_weight="1"
-                android:gravity="center"
-                android:text="+" />
+                android:src="@drawable/minus" />
         </LinearLayout>
 
         <Space

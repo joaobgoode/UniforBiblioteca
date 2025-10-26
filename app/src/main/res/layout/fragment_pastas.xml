@@ -20,17 +20,31 @@
             android:layout_height="wrap_content"
             android:gravity="center"
             android:text="Minhas Pastas"
-            android:textSize="20sp" />
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="5dp"
+            style="@style/ScreenTitleText" />
 
         <EditText
             android:id="@+id/pesquisarPastas"
-            android:layout_width="match_parent"
+            android:layout_width="300dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
+            android:layout_marginTop="10dp"
             android:ems="10"
             android:gravity="center"
             android:hint="Pesquisar..."
             android:inputType="text" />
+
+
+        <View
+            android:id="@+id/divider4"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_gravity="center"
+            android:layout_margin="20dp"
+            android:background="?android:attr/listDivider"
+            android:backgroundTint="@color/black"
+            android:foregroundGravity="center" />
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/pastasRecyclerView"
