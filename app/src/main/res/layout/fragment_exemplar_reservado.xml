@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    tools:context=".ExemplarReservadoFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <ImageView
+            android:id="@+id/exemplar_reservado_capa"
+            android:layout_width="120dp"
+            android:layout_height="200dp"
+            android:layout_gravity="center"
+            android:src="@drawable/book_cover_placeholder" />
+
+        <TextView
+            android:id="@+id/textView34"
+            style="@style/TitleText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Usuário:" />
+
+        <TextView
+            android:id="@+id/exemplar_reservado_nome"
+            style="@style/NormalText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="15dp"
+            android:text="TextView" />
+
+        <TextView
+            android:id="@+id/textView56"
+            style="@style/TitleText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Condições:" />
+
+        <TextView
+            android:id="@+id/exemplar_reservado_condicoes"
+            style="@style/NormalText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="15dp"
+            android:text="TextView" />
+
+        <TextView
+            android:id="@+id/textView58"
+            style="@style/TitleText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Data de Reserva:" />
+
+        <TextView
+            android:id="@+id/exemplar_reservado_data_reserva"
+            style="@style/NormalText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="15dp"
+            android:text="TextView" />
+
+        <TextView
+            android:id="@+id/textView60"
+            style="@style/TitleText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Data Limite:" />
+
+        <TextView
+            android:id="@+id/exemplar_reservado_data_limite"
+            style="@style/NormalText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="15dp"
+            android:text="TextView" />
+
+
+
+        <LinearLayout
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/exemplar_reservado_ver_btn"
+                style="@style/botao"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:text="Ver Livro"/>
+
+            <Button
+                android:id="@+id/exemplar_reservado_editar_btn"
+                style="@style/botao"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:text="Editar"/>
+
+            <Button
+                android:id="@+id/exemplar_reservado_cancelar_btn"
+                style="@style/botao"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:text="Cancelar Reserva"/>
+
+            <Button
+                android:id="@+id/exemplar_reservado_indisponivel_btn"
+                style="@style/botao"
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:text="Tornar Indisponível"/>
+
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/frameLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    tools:context=".LivroFragment">
+
+    <Button
+        android:id="@+id/livro_voltar"
+        style="@style/voltar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- Scroll para o conteúdo -->
+    <ScrollView
+        android:id="@+id/livro_scroll"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/livro_voltar">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="24dp">
+
+            <ImageView
+                android:id="@+id/capaLivro"
+                android:layout_width="match_parent"
+                android:layout_height="130dp"
+                android:layout_marginTop="20dp"
+                android:src="@drawable/book_cover_placeholder" />
+
+            <TextView
+                android:id="@+id/tipoLivro"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:gravity="center"
+                android:text="Tipo Livro"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tituloLivro"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:text="Título"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/autorLivro"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="10dp"
+                android:text="Autor" />
+
+            <TextView
+                android:id="@+id/coautor1Livro"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="10dp"
+                android:text="Co-autor 1" />
+
+            <TextView
+                android:id="@+id/coautor2Livro"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="10dp"
+                android:text="Co-autor 2" />
+
+            <TextView
+                android:id="@+id/edicaoLivro"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:text="Edição / Ano de Edição" />
+
+            <TextView
+                android:id="@+id/idiomaLivro"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="10dp"
+                android:text="Idioma" />
+
+            <TextView
+                android:id="@+id/publicacaoLivro"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="10dp"
+                android:text="Publicação" />
+
+            <TextView
+                android:id="@+id/textView46"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:text="Resumo"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/resumoLivro"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="10dp"
+                android:gravity="center"
+                android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque placerat non mi sit amet tincidunt. In gravida purus at augue vehicula, eget mattis lectus cursus. Etiam volutpat velit eu sem blandit auctor. Sed in sodales enim." />
+
+            <TextView
+                android:id="@+id/quantidadeLivro"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:gravity="center"
+                android:text="Quantidade Disponível: X / X"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/addaCesta"
+                style="@style/botao"
+                android:layout_width="230dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginBottom="5dp"
+                android:backgroundTint="@color/button"
+                android:text="Adicionar à cesta" />
+
+            <Button
+                android:id="@+id/addaPasta"
+                android:layout_width="230dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                style="@style/botao"
+                android:text="Adicionar a uma pasta" />
+
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

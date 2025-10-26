@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.TextView
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -20,6 +21,11 @@ class MenuFragment : Fragment() {
     // TODO: Rename and change types of parameters
     private var param1: String? = null
     private var param2: String? = null
+
+    lateinit var contatoBtn: TextView
+    lateinit var chatBtn: TextView
+    lateinit var configBtn: TextView
+    lateinit var acervoBtn: TextView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -56,4 +62,49 @@ class MenuFragment : Fragment() {
                 }
             }
     }
+
+    override fun onResume() {
+        super.onResume()
+        (activity as? MainActivity)?.changeState("menu")
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+        contatoBtn = view.findViewById(R.id.menuContatoBtn)
+        chatBtn = view.findViewById(R.id.menuChatBtn)
+        configBtn = view.findViewById(R.id.menuConfigButton)
+        acervoBtn = view.findViewById(R.id.menuAcervoButton)
+
+        chatBtn.setOnClickListener {
+            parentFragmentManager.beginTransaction()
+                .replace(R.id.mainFragmentContainer, ChatFragment::class.java, null)
+                .addToBackStack("menu")
+                .commit()
+        }
+
+        contatoBtn.setOnClickListener {
+            parentFragmentManager.beginTransaction()
+                .replace(R.id.mainFragmentContainer, ContatoFragment::class.java, null)
+                .addToBackStack("menu")
+                .commit()
+        }
+
+        configBtn.setOnClickListener {
+            parentFragmentManager.beginTransaction()
+                .replace(R.id.mainFragmentContainer, ConfigFragment::class.java, null)
+                .addToBackStack("menu")
+                .commit()
+        }
+
+        acervoBtn.setOnClickListener {
+            (activity as? MainActivity)?.changeState("acervo")
+            parentFragmentManager.beginTransaction()
+                .replace(R.id.mainFragmentContainer, AcervoFragment::class.java, null)
+                .addToBackStack("menu")
+                .commit()
+        }
+    }
+
+
 }

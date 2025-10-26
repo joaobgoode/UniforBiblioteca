@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="NormalText">
+        <item name="android:fontFamily">@font/tt_neoris_trial_regular</item>
+        <item name="android:textColor">@color/primary_text_color</item>
+        <item name="android:layout_marginEnd">10dp</item>
+        <item name="android:layout_marginStart">10dp</item>
+        <item name="android:textSize">@dimen/font_medium</item>
+    </style>
+
+    <style name="ThinText">
+        <item name="android:fontFamily">@font/tt_neoris_trial_hairline</item>
+        <item name="android:textColor">@color/primary_text_color</item>
+        <item name="android:textSize">@dimen/font_extra_small</item>
+        <item name="android:layout_marginEnd">10dp</item>
+        <item name="android:layout_marginStart">10dp</item>
+    </style>
+
+
+    <style name="LightText">
+        <item name="android:fontFamily">@font/tt_neoris_trial_extralight</item>
+        <item name="android:textColor">@color/primary_text_color</item>
+        <item name="android:textSize">@dimen/font_small</item>
+        <item name="android:layout_marginEnd">10dp</item>
+        <item name="android:layout_marginStart">10dp</item>
+    </style>
+
+
+    <style name="TitleText">
+        <item name="android:fontFamily">@font/tt_neoris_trial_bold</item>
+        <item name="android:textColor">@color/primary_text_color</item>
+        <item name="android:textSize">@dimen/font_medium</item>
+        <item name="android:layout_marginEnd">10dp</item>
+        <item name="android:layout_marginStart">10dp</item>
+    </style>
+
+
+    <style name="ScreenTitleText">
+        <item name="android:fontFamily">@font/tt_neoris_trial_hairline</item>
+        <item name="android:textColor">@color/primary_text_color</item>
+        <item name="android:textSize">@dimen/font_large</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:layout_marginEnd">10dp</item>
+        <item name="android:layout_marginStart">10dp</item>
+        <item name="android:layout_marginTop">20dp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_marginBottom">20dp</item>
+    </style>
+
+
+    <style name="voltar">
+d        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:backgroundTint">#00FFFFFF</item>
+        <item name="icon">@drawable/voltar</item>
+        <item name="iconTint">@color/botao_borda</item>
+    </style>
+
+    <style name="editar">
+        <item name="android:layout_width">60dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:backgroundTint">#00FFFFFF</item>
+        <item name="icon">@drawable/pencil</item>
+        <item name="iconTint">@color/botao_borda</item>
+    </style>
+
+
+    <style name="users">
+        <item name="android:layout_width">60dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:backgroundTint">#00FFFFFF</item>
+        <item name="icon">@drawable/users</item>
+        <item name="iconTint">@color/botao_borda</item>
+    </style>
+
+    <style name="trash">
+        <item name="android:layout_width">50dp</item>
+        <item name="android:layout_height">50dp</item>
+        <item name="android:backgroundTint">#00FFFFFF</item>
+
+        <item name="icon">@drawable/lixo</item>
+        <item name="iconTint">@color/botao_borda_neg</item>
+
+        <item name="iconGravity">textStart</item>
+        <item name="iconPadding">0dp</item>
+        <item name="android:gravity">center</item>
+        <item name="iconSize">24dp</item>
+
+        <item name="strokeWidth">2dp</item>
+        <item name="strokeColor">@color/botao_borda_neg</item>
+
+        <item name="cornerRadius">8dp</item>
+    </style>
+
+    <style name="editar_borda">
+        <item name="android:layout_width">50dp</item>
+        <item name="android:layout_height">50dp</item>
+        <item name="android:backgroundTint">#00FFFFFF</item>
+
+        <item name="icon">@drawable/pencil</item>
+        <item name="iconTint">@color/amarelo</item>
+
+        <item name="iconGravity">textStart</item>
+        <item name="iconPadding">0dp</item>
+        <item name="android:gravity">center</item>
+        <item name="iconSize">24dp</item>
+
+        <item name="strokeWidth">2dp</item>
+        <item name="strokeColor">@color/amarelo</item>
+
+        <item name="cornerRadius">8dp</item>
+    </style>
+
+
+    <style name="botao" parent="@style/Widget.MaterialComponents.Button">
+        <item name="android:textColor">@color/botao_fundo</item>
+        <item name="android:background">@drawable/botao</item>
+        <item name="backgroundTint">@null</item>
+    </style>
+
+    <style name="botao_neg" parent="@style/Widget.MaterialComponents.Button">
+        <item name="android:background">@drawable/botao_neg</item>
+        <item name="android:textColor">@color/botao_fundo_neg</item>
+        <item name="backgroundTint">@null</item>
+    </style>
+
+
+</resources>

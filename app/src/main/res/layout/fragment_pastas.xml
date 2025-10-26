@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -7,27 +8,59 @@
     android:orientation="vertical"
     tools:context=".PastasFragment">
 
-    <TextView
-        android:id="@+id/textView14"
+    <LinearLayout
+        android:id="@+id/linearLayout"
         android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/textView14"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Minhas Pastas"
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="5dp"
+            style="@style/ScreenTitleText" />
+
+        <EditText
+            android:id="@+id/pesquisarPastas"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:ems="10"
+            android:gravity="center"
+            android:hint="Pesquisar..."
+            android:inputType="text" />
+
+
+        <View
+            android:id="@+id/divider4"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_gravity="center"
+            android:layout_margin="20dp"
+            android:background="?android:attr/listDivider"
+            android:backgroundTint="@color/black"
+            android:foregroundGravity="center" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/pastasRecyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </LinearLayout>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/novaPasta"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:gravity="center"
-        android:text="Minhas Pastas"
-        android:textSize="20sp" />
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="20dp"
+        android:clickable="true"
+        android:src="@android:drawable/ic_input_add"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
 
-    <EditText
-        android:id="@+id/pesquisarPastas"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:ems="10"
-        android:gravity="center"
-        android:hint="Pesquisar..."
-        android:inputType="text" />
-
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/pastasRecyclerView"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent" />
-
-</LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

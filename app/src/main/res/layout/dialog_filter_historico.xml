@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="300dp"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/modalbackground"
+    android:orientation="vertical">
+
+    <CheckBox
+        android:id="@+id/filtroAlugados"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Alugados" />
+
+    <CheckBox
+        android:id="@+id/filtroReservados"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Reservados" />
+
+    <CheckBox
+        android:id="@+id/filtroDevolvidos"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Devolvidos" />
+
+    <CheckBox
+        android:id="@+id/filtroTodos"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Todos" />
+
+    <View
+        android:id="@+id/divider"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/grey" />
+
+    <CheckBox
+        android:id="@+id/filtroPorData"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Por Data" />
+
+    <com.google.android.material.slider.RangeSlider
+        android:id="@+id/dateRangeSlider"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:stepSize="1"
+        android:layout_margin="16dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/textView13"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Inicio:" />
+
+        <EditText
+            android:id="@+id/startDateText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:ems="10"
+            android:inputType="text" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/textView15"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Fim:" />
+
+        <EditText
+            android:id="@+id/endDateText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:ems="10"
+            android:inputType="text" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/pesquisarHistoricoButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="Pesquisar"
+        style="@style/botao" />
+
+</LinearLayout>

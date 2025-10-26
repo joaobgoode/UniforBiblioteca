@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="@color/background"
     android:orientation="vertical"
     tools:context=".HistoricoFragment">
@@ -13,12 +14,16 @@
         android:layout_height="wrap_content"
         android:gravity="center"
         android:text="Meus Livros"
-        android:textSize="20sp" />
+
+        android:layout_marginBottom="5dp"
+        android:layout_marginTop="5dp"
+        style="@style/ScreenTitleText" />
 
     <LinearLayout
         android:layout_width="350dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
+        android:layout_marginTop="10dp"
         android:orientation="vertical">
 
         <EditText
@@ -32,13 +37,25 @@
             android:inputType="text" />
 
         <Button
-            android:id="@+id/pastasFiltroBtn"
+            android:id="@+id/historicoFiltroBtn"
             android:layout_width="100dp"
             android:layout_height="wrap_content"
             android:layout_gravity="end"
             android:gravity="center"
+            style="@style/botao"
             android:text="Filtro" />
     </LinearLayout>
+
+
+    <View
+        android:id="@+id/divider4"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_gravity="center"
+        android:layout_margin="20dp"
+        android:background="?android:attr/listDivider"
+        android:backgroundTint="@color/black"
+        android:foregroundGravity="center" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerViewHistorico"

@@ -1,13 +1,17 @@
 package com.example.uniforbiblioteca
 
+import android.content.Intent
 import android.content.res.ColorStateList
 import android.os.Bundle
+import android.view.View
 import android.widget.Button
+import android.widget.LinearLayout
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import com.google.android.material.button.MaterialButton
 
@@ -18,6 +22,8 @@ class MainActivity : AppCompatActivity() {
     lateinit var pastasBtn: MaterialButton
     lateinit var menuBtn: MaterialButton
     lateinit var fm: FragmentManager
+
+    lateinit var bottomMenu: LinearLayout
 
     var state = "Home"
 
@@ -36,13 +42,13 @@ class MainActivity : AppCompatActivity() {
         pastasBtn = findViewById(R.id.pastasBtn)
         menuBtn = findViewById(R.id.menuBtn)
         fm = supportFragmentManager
+        bottomMenu = findViewById(R.id.bottomMenu)
     }
 
     override fun onStart() {
         super.onStart()
 
         homeBtn.setOnClickListener {
-            changeState("home")
             fm.beginTransaction()
                 .replace(R.id.mainFragmentContainer, HomeFragment::class.java, null)
                 .commit()
@@ -50,14 +56,11 @@ class MainActivity : AppCompatActivity() {
 
 
         historicoBtn.setOnClickListener {
-            changeState("historico")
             fm.beginTransaction()
                 .replace(R.id.mainFragmentContainer, HistoricoFragment::class.java, null)
                 .commit()
         }
         pastasBtn.setOnClickListener {
-            changeState("pastas")
-            state = "pastas"
             fm.beginTransaction()
                 .replace(R.id.mainFragmentContainer, PastasFragment::class.java, null)
                 .commit()
@@ -65,6 +68,7 @@ class MainActivity : AppCompatActivity() {
         menuBtn.setOnClickListener {
             fm.beginTransaction()
                 .replace(R.id.mainFragmentContainer, MenuFragment::class.java, null)
+                .addToBackStack(null)
                 .commit()
         }
     }
@@ -76,14 +80,38 @@ class MainActivity : AppCompatActivity() {
             homeBtn.iconTint = ContextCompat.getColorStateList(this, R.color.grey)
             historicoBtn.iconTint = ContextCompat.getColorStateList(this, R.color.black)
             pastasBtn.iconTint = ContextCompat.getColorStateList(this, R.color.black)
+            showBottomNav()
         } else if (state == "historico"){
             homeBtn.iconTint = ContextCompat.getColorStateList(this, R.color.black)
             historicoBtn.iconTint = ContextCompat.getColorStateList(this, R.color.grey)
             pastasBtn.iconTint = ContextCompat.getColorStateList(this, R.color.black)
-        } else if (state == "pastas"){
+            showBottomNav()
+        } else if (state == "pastas") {
             homeBtn.iconTint = ContextCompat.getColorStateList(this, R.color.black)
             historicoBtn.iconTint = ContextCompat.getColorStateList(this, R.color.black)
             pastasBtn.iconTint = ContextCompat.getColorStateList(this, R.color.grey)
+            showBottomNav()
+        } else if (state == "acervo") {
+            homeBtn.iconTint = ContextCompat.getColorStateList(this, R.color.black)
+            historicoBtn.iconTint = ContextCompat.getColorStateList(this, R.color.black)
+            pastasBtn.iconTint = ContextCompat.getColorStateList(this, R.color.black)
+            showBottomNav()
+        } else {
+            hideBottomNav()
         }
+    }
+
+    private fun showBottomNav() {
+        bottomMenu.visibility = View.VISIBLE
+    }
+
+    private fun hideBottomNav() {
+        bottomMenu.visibility = View.GONE
+    }
+
+
+    fun sair(){
+        val intencao = Intent(this, LoginActivity::class.java)
+        startActivity(intencao)
     }
 }
