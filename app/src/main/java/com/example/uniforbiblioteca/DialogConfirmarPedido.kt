@@ -1,6 +1,5 @@
 package com.example.uniforbiblioteca
 
-import LivroCardData
 import android.app.Dialog
 import android.os.Bundle
 import android.view.LayoutInflater

@@ -1,6 +1,5 @@
 package com.example.uniforbiblioteca
 
-import PastaCardData
 import android.app.Dialog
 import android.content.Context
 import android.os.Bundle
