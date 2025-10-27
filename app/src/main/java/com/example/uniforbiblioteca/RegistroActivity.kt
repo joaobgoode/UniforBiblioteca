@@ -48,9 +48,7 @@ class RegistroActivity : AppCompatActivity() {
         super.onStart()
 
         backBtn.setOnClickListener {
-            val intencao = Intent(this, Placeholder::class.java)
-            intencao.putExtra("origem", "back")
-            startActivity(intencao)
+            onBackPressed()
         }
 
         registrarBtn.setOnClickListener {

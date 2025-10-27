@@ -36,9 +36,7 @@ class ModificarActivity : AppCompatActivity() {
         super.onStart()
 
         voltar.setOnClickListener {
-            val intencao = Intent(this, Placeholder::class.java)
-            intencao.putExtra("origem", "voltar")
-            startActivity(intencao)
+            onBackPressed()
         }
 
         modificar.setOnClickListener {

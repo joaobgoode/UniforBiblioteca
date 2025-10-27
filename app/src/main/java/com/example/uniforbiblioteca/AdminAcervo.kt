@@ -1,17 +1,14 @@
 package com.example.uniforbiblioteca
 
-import LivroCardData
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
-import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.uniforbiblioteca.ui.DialogConfirmarDeletarLivro
-import com.example.uniforbiblioteca.ui.DialogConfirmarDeletarUser
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 
 private const val ARG_PARAM1 = "param1"

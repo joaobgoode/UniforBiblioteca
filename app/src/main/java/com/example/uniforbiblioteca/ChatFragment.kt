@@ -6,6 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import android.widget.EditText
+import android.widget.ImageButton
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -13,7 +14,7 @@ import androidx.recyclerview.widget.RecyclerView
 class ChatFragment : Fragment() {
 
     private lateinit var voltarBtn: Button
-    private lateinit var sendBtn: Button
+    private lateinit var sendBtn: ImageButton
     private lateinit var inputMessage: EditText
     private lateinit var chatRecyclerView: RecyclerView
 
